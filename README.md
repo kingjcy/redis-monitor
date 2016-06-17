@@ -7,14 +7,20 @@ base RedisLive,monitor multiple redis-server in product enviroment:
 * 3. sms alert when crash , master-slave stats changed
 
 ### install
-    in src/script/redis-monitor.sh add redis-monitor as a startup service for redhat
-    python redis_live.py #start web with port 8888
-    python redis_monitor.py # start info collector
+    #in src/script/redis-monitor.sh add redis-monitor as a startup service for redhat
+
+	#start web with port 8888
+	python redis_live.py 
+	# start info collector
+    python redis_monitor.py 
+
     #start daemon
     python redis_live_daemon.py
     python redis_monitor_daemon.py
   
 ### overview
+	view http://ip:port/index.html
+
 ![Redis Live](https://raw.github.com/LittlePeng/redis-monitor/master/design/redis-live.png)
 ![Redis Live](https://raw.github.com/LittlePeng/redis-monitor/master/design/overview.png)
 
